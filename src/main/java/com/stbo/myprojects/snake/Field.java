@@ -15,12 +15,12 @@ public class Field {
 					arr[i][j] = '#';
 				} else if (j > 0 && i == arr.length - 1 && j < arr[i].length - 1) {
 					arr[i][j] = '#';
-				} else if (i > 0 && i < arr.length - 1 && j > 0 && j < arr[i].length - 1) {
-					arr[i][j] = ' ';
 				} else if (j == arr[i].length - 1) {
 					arr[i][j] = '#';
 				} else if (j == 0) {
 					arr[i][j] = '#';
+				} else {
+					arr[i][j] = ' ';
 				}
 
 			}
