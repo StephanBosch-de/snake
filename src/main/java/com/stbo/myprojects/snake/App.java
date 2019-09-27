@@ -8,6 +8,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Field field1 = new Field();
+        
+        field1.generateField(8,12);
+        field1.printField();
     }
 }
