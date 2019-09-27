@@ -22,7 +22,6 @@ public class Field {
 				} else {
 					arr[i][j] = ' ';
 				}
-
 			}
 		}
 	}
@@ -34,6 +33,14 @@ public class Field {
 			}
 			System.out.println();
 		}
+	}
+
+	public Character[][] getArr() {
+		return arr;
+	}
+
+	public void setArr(Character[][] arr) {
+		this.arr = arr;
 	}
 
 }

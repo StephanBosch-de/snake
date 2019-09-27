@@ -12,5 +12,12 @@ public class App
         
         field1.generateField(8,12);
         field1.printField();
+        
+        Player player1 = new Player(field1);
+
+        player1.twistPlayer(field1);
+        player1.twistPlayer(field1);
+        player1.twistPlayer(field1);
+        player1.twistPlayer(field1);
     }
 }
