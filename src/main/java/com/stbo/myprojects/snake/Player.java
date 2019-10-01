@@ -17,8 +17,8 @@ public class Player {
 		snake[1] = '>';
 		snake[2] = 'v';
 		snake[3] = '<';
-		currRow = 3;
-		currCol = 3;
+		currRow = 2;
+		currCol = 2;
 		counter = 0;
 		field.getArr()[currRow][currCol] = snake[counter];
 		field.printField();
@@ -31,7 +31,7 @@ public class Player {
 
 		while (temp == 0) {
 			System.out.println("In welche Richtung soll sich die Schlange bewegen?");
-			System.out.println("a = links; d = rechts; w = vorrücken");
+			System.out.println("a = Drehung links; d = Drehung rechts; w = Vorrücken");
 			System.out.println("Für das Beenden bitte 'q' drücken");
 			command = sc.next().charAt(0);
 
@@ -60,13 +60,13 @@ public class Player {
 				break;
 			case 'w':
 				field.getArr()[currRow][currCol] = ' ';
-				if (counter == 0 && field.getArr()[currRow - 1][currCol] != '#') {
+				if (counter == 0 && field.getArr()[currRow - 1][currCol] != '*') {
 					currRow -= 1;
-				} else if (counter == 1 && field.getArr()[currRow][currCol + 1] != '#') {
+				} else if (counter == 1 && field.getArr()[currRow][currCol + 1] != '*') {
 					currCol += 1;
-				} else if (counter == 2 && field.getArr()[currRow + 1][currCol] != '#') {
+				} else if (counter == 2 && field.getArr()[currRow + 1][currCol] != '*') {
 					currRow += 1;
-				} else if (counter == 3 && field.getArr()[currRow][currCol - 1] != '#') {
+				} else if (counter == 3 && field.getArr()[currRow][currCol - 1] != '*') {
 					currCol -= 1;
 				} else {
 					System.out.println("Spielfeld kann nicht verlassen werden");

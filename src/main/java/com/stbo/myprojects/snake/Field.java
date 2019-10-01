@@ -14,13 +14,13 @@ public class Field {
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[i].length; j++) {
 				if (j > 0 && i == 0 && j < arr[i].length - 1) {
-					arr[i][j] = '#';
+					arr[i][j] = '*';
 				} else if (j > 0 && i == arr.length - 1 && j < arr[i].length - 1) {
-					arr[i][j] = '#';
+					arr[i][j] = '*';
 				} else if (j == arr[i].length - 1) {
-					arr[i][j] = '#';
+					arr[i][j] = '*';
 				} else if (j == 0) {
-					arr[i][j] = '#';
+					arr[i][j] = '*';
 				} else {
 					arr[i][j] = ' ';
 				}
