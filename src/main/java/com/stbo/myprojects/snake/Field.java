@@ -7,15 +7,8 @@ public class Field {
 	// Purpose: Create a field with borders for the sanke
 
 	private Character[][] arr;
-	private int row;
-	private int col;
-	private Scanner sc = new Scanner(System.in);
 
-	public void generateField() {
-
-		System.out.println("Wie breit und wie lang soll das Spielfeld sein? (Länge x Breite)");
-		row = sc.nextInt();
-		col = sc.nextInt();
+	public void generateField(int row, int col) {
 
 		arr = new Character[row][col];
 		for (int i = 0; i < arr.length; i++) {
@@ -42,22 +35,6 @@ public class Field {
 			}
 			System.out.println();
 		}
-	}
-
-	public int getRow() {
-		return row;
-	}
-
-	public void setRow(int row) {
-		this.row = row;
-	}
-
-	public int getCol() {
-		return col;
-	}
-
-	public void setCol(int col) {
-		this.col = col;
 	}
 
 	public Character[][] getArr() {
